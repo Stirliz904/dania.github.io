@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+    <meta charset="utf-8">
+    <title>Cайт</title>
+        <style>
+            body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+         /* * {
+  margin: 0;
+  padding: 0;  
+}*/
+           
+body{
+    background-color: burlywood;
+    background-image: url("../img/fon.jpg");
+}
+header{
+    background-image: url("../img/header_fon.jpg");
+    background-size: 100% 100%;
+    height: 500px; padding: 40px
+}
+.navigate{
+    background-color: #333;
+    width: 100%;
+    position: sticky;
+    position: fixed;
+    top: 0;
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li{
+    float: left;
+}
+nav li:hover{
+    background-color: #111111;
+}
+main{
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px 10% 20px 10%;
+}
+footer{
+    background-color: #333;
+    text-align: center;
+    padding: 15px 0;
+    color: #ffffff;
+    bottom: 0;
+    width: 100%;
+}
+article img{width: 100%;
+            justify-content: space-around}
+section{
+    border: 1px dotted red ;
+    display: flex;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+}
+
+/*   section1   */
+#sec1{
+    padding: 20px;
+}
+/*   section2   */
+#sec2{
+    padding: 20px;
+    justify-content:space-around;
+    
+}
+#sec2 article{
+    width: 60%;
+}
+/*   section3   */
+#sec3{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec3 article{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sec3 article img{
+    width: 100%;
+}
+/*   section4   */
+#sec4{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec4 article{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#sec4 article img{
+    width: 100%;
+}
+/*   section5   */
+#sec5{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec5 article{
+    width: 49%;   
+}
+#sec5 article img{
+    float: right;
+    width: 50%;
+    padding: 0 1% 1% 0;
+}
+/*   section6   */
+#sec6{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec6 article{
+    width: 49%;   
+}
+#sec6 article img{
+    float: left;
+    width: 50%;
+    padding: 0 1% 1% 0;
+}
+.clearfix {
+    overflow: auto;
+    background-color: rgba(255,255,255,0.5);
+}
+/*   section7   */
+#sec7{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec7 article{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#sec7 article img{
+    width: 90%; 
+}
+            #sec8{
+    padding: 20px;
+    justify-content:space-around;
+    
+}
+#sec8 article{
+    width: 60%;
+}
+            hr{background-color:black;
+                width: 500px;
+            height: 1px;
+            align-content: center}
+            p{font-size:20px}
+            #sec9{
+    padding: 20px;
+    justify-content:space-around;
+}
+#sec9 article{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#sec9 article img{
+    width: 90%; 
+}
+            #sec8{
+    padding: 20px;
+    justify-content:space-around;
+    
+}
+            #sec10{
+    padding: 20px;
+    justify-content:space-around;
+    
+}
+#sec10 article{
+    width: 60%;
+}
+            #sec11{
+    padding: 20px;
+    justify-content:space-around;
+    
+}
+#sec11 article{
+    width: 60%;
+}
+            
+        </style>
+        <header 
+                >
+            <h2 style="text-align:center">Слайд</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="20.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="21.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="22.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="23.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+    <div class="column">
+    <img src="24.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src="20.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <img src="21.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <img src="22.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="23.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">5 / 5</div>
+      <img src="24.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="20.jpg" style="width:100%" onclick="currentSlide(1)" alt="Сузір'я">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="21.jpg" style="width:100%" onclick="currentSlide(2)" alt="Сонячна система">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="22.jpg" style="width:100%" onclick="currentSlide(3)" alt="Туманність навколо масивної зорі">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="23.jpg" style="width:100%" onclick="currentSlide(4)" alt="Чумацький шлях">
+    </div>
+      <div class="column">
+      <img class="demo cursor" src="24.jpg" style="width:100%" onclick="currentSlide(5)" alt="Чорна діра">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+                
+           
+        </header>
+        <nav class="navigate">
+        <ul>
+            <li><a href="#sec2">Сонячна система</a></li>
+             <li><a href="#sec1">Сонце</a></li>
+             <li><a href="#sec12">Планети земної групи</a></li>
+             <li><a href="#sec8">Пояс астероїдів</a></li>
+            <li><a href="#sec13">Газові гіганти</a></li>
+             <li><a href="#sec10">Пояс корпера</a></li>
+             <li><a href="#sec11">Карликові планети</a></li></ul></nav>
+        <main>
+    
+    <section id="sec2">
+        <article id="1">
+        <p><b>Сонячна система</b>— планетна система, що включає в себе центральну зорю — Сонце, і всі природні космічні об'єкти (планети, астероїди, комети, потоки сонячного вітру тощо), які об'єднуються гравітаційною взаємодією. Сонячна система є частиною значно більшого комплексу, який складається із зір і міжзоряної речовини — галактики Чумацький Шлях.</p>
+            <p><b>Схема Сонячної системи:</b></p>
+       
+        <img src="1.jpg" style="width:100%">
+            </article></section>
+        <section id="sec1">
+            <article>
+            <img src="4.jpg" style="width: 100%">
+            </article>
+         <article>
+                <h1 style="font-size: 30px">Сонце</h1>
+                 
+            <p>Сонце — єдина зоря Сонячної системи та її головний компонент. Його маса (332 900 мас Землі) досить велика для підтримання термоядерних реакцій синтезу в його надрах, внаслідок яких вивільняється велика кількість енергії, що випромінюється в простір здебільшого у вигляді електромагнітного випромінювання, максимум якого припадає на діапазон хвиль довжиною 400—700 нм, який відповідає видимому світлу.</p>
+            </article></section>
+         <section id="sec12"> 
+            <article>
+         
+                <h1 style="font-size: 30px">Планети земної групи</h1>
+                 
+            <p>Планети земної групи складаються з чотирьох планет й є самими маленькими в Сонячній системі.Сонячна система поділяється на внутрішню і зовнішню область. Планети земної групи входять до внутрішньої області</p>
+             </article>   </section>
+        <section id="sec7"><article>        
+                    <img src="6.jpg" alt="foto" style="width:50%">
+            <h1><a href="">Меркурій</a></h1>
+                </article>
+                <article>        
+                    <img src="7.jpg" alt="foto" style="width:55%">
+                    <h1><a href="">Венера</a></h1>
+                </article>
+                <article>        
+                    <img src="8.jpg" alt="foto" style="width: 50%">
+                    <h1><a href="">Земля</a></h1>
+            </article>
+                    <article>        
+                    <img src="9.jpg" alt="foto" style="width: 45%">
+                        <h1><a href="">Марс</a></h1>
+                </article>
+                <article>        
+                
+             </article> 
+        </section>
+        <section id="sec8"> 
+            <img src="10.jpg" style="width: 30%">
+            <article>
+         
+                <h1 style="font-size: 30px">Пояс астероїдів</h1>
+                 
+            <p>Астероїди — найпоширеніші малі тіла Сонячної системи. Більшість з них утворюють так званий головний пояс астероїдів, який лежить між орбітами Марса та Юпітера, на відстані від 2,3 до 3,3 а.о. від Сонця. Вважають, що це залишки з часів формування Сонячної системи, які не змогли об'єднатися в одне тіло через гравітаційні збурення Юпітера. Більшість астероїдів обертаються навколо Сонця в тому ж напрямку, що й великі планети, але їхні орбіти здебільшого витягнуті та нахилені до площини екліптики.</p>
+            </article></section>
+        <section id="sec13"> <article>
+          <h1 style="font-size: 30px">Газові гіганти</h1>
+                 
+            <p>Зовнішня область Сонячної системи є місцем розташування газових гігантів та їхніх супутників, а також транснептунових об'єктів, астероїдно-кометно-газових об'єктів поясу Койпера, Розсіяного диска і хмари Оорта. Орбіти багатьох короткоперіодичних комет, а також астероїдів-кентаврів, також проходять в цій області. Тверді об'єкти зовнішньої області через велику відстань від Сонця, а отже, набагато нижчу температуру, містять лід води, аміаку і метану.</p>
+             </article>   </section>
+        <section id="sec9"><article>        
+                    <img src="11.jpg" alt="foto" style="width:50%">
+            <h1><a href="">Юпітер</a></h1>
+                </article>
+                <article>        
+                    <img src="12.jpg" alt="foto" style="width:55%">
+                    <h1><a href="">Сатурн</a></h1>
+                </article>
+                <article>        
+                    <img src="13.jpg" alt="foto" style="width: 50%">
+                    <h1><a href="">Уран</a></h1>
+            </article>
+                    <article>        
+                    <img src="14.jpg" alt="foto" style="width: 55%">
+                        <h1><a href="">Нептун</a></h1>
+                </article>
+                <article>        
+                
+             </article> 
+        </section>
+        <section id="sec10"> 
+            <img src="15.jpg" style="width: 20%">
+            <article>
+         
+                <h1 style="font-size: 30px">Пояс Койпера</h1>
+                 
+            <p>Пояс Койпера — область реліктів часів утворення Сонячної системи, є великим поясом уламків, подібним до поясу астероїдів, але складається переважно з льоду. Простягається між 30 і 55 а. о. від Сонця. Складений переважно малими тілами Сонячної системи, але багато з найбільших об'єктів поясу Койпера, такі як Квавар, Варуна і Орк, можуть бути перекласифіковані в карликові планети після уточнення їхніх параметрів. За оцінками, понад 100 000 об'єктів поясу Койпера мають діаметр понад 50 км, але повна маса поясу дорівнює лише одній десятій чи навіть одній сотій маси Землі. Багато з об'єктів поясу мають численні супутники</p>
+            </article></section>
+        <section id="sec11"> 
+            <img src="16.jpg" style="width: 30%">
+            <article>
+         
+                <h1 style="font-size: 30px">Карликові планети</h1>
+                 
+            <p>Карликова планета — небесне тіло, що обертається безпосередньо навколо Сонця (тобто, не є супутником іншої планети), має достатню масу, щоб гравітація надала їй гідростатично-рівноважної форми, проте не розчистила околиці своєї орбіти від інших подібних тіл — вони «не домінують» на своїй орбіті</p>
+            </article></section>
+        </main>
+        <footer>
+         <h2 style="text-align: center">Про сайт</h2>
+        <p style="text-align: center; font-size: 14px">Сайт створений для ознайомлення з нашою Cонячною системою. Огляд,фото,термінологія.</p></footer>
+      
